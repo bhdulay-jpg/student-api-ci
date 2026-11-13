@@ -23,5 +23,5 @@ test("should return undefined for unknown student", () => {
 });
 
 test("should contain three students", () => {
-  expect(countStudents()).toBe(10);
+  expect(countStudents()).toBe(3);
 });
