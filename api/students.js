@@ -27,9 +27,12 @@ function getStudentById(id) {
 function countStudents() {
   return students.length;
 }
-
+function findStudentsByCourse(course) {
+  return students.filter((student) => student.course === course);
+}
 module.exports = {
   getStudents,
   getStudentById,
   countStudents,
+  findStudentsByCourse,
 };

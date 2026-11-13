@@ -2,8 +2,8 @@ const {
   getStudents,
   getStudentById,
   countStudents,
+  findStudentsByCourse,
 } = require("../api/students");
-
 test("should return all students", () => {
   const students = getStudents();
 
@@ -23,5 +23,10 @@ test("should return undefined for unknown student", () => {
 });
 
 test("should contain three students", () => {
-  expect(countStudents()).toBe(10);
+  expect(countStudents()).toBe(3);
+});
+test("should find BSCS students", () => {
+  const result = findStudentsByCourse("BSCS");
+
+  expect(result.length).toBe(1);
 });
